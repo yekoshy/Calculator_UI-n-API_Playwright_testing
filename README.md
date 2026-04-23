@@ -31,9 +31,9 @@ Here is an overview of the files included in this repository and what they do:
 * **`calc_v2_test.spec.ts` (v2)**: Advanced UI test script using the recorded steps to dynamically loop through all test cases provided in `testcases.json`.
 
 ### Test Scripts - API Testing
-* **`calc-api.spec.ts`**: Basic API test for the calculator backend endpoint. Tests the API directly without UI interaction.
-* **`calc_v2_api.spec.ts` (v2)**: Data-driven API test script that loops through `testcases.json` to test various calculation scenarios via HTTP **Post** request.
-* **`calc_v3-api.spec.ts` (v3)**: Data-driven API test script that loops through `testcases.json` to test various calculation scenarios via HTTP **Get** request.
+* **`calc_api.spec.ts`**: Basic API test for the calculator backend endpoint. Tests the API directly without UI interaction.
+* **`calc_v2_api.spec.ts` (v2)**: Data-driven API test script that loops through `testcases.json` to test various calculation scenarios via HTTP **POST** request.
+* **`calc_v3_api.spec.ts` (v3)**: Data-driven API test script that loops through `testcases.json` to test various calculation scenarios via HTTP **GET** request.
 
 ### Configuration
 * **`config/playwright.config.ts`**: Shared Playwright configuration for cross-browser execution, device emulation, retries, parallel workers, and reporting.
@@ -41,8 +41,8 @@ Here is an overview of the files included in this repository and what they do:
 ### Reports & Results
 * **`test-results/`**: Contains trace files (videos, DOM snapshots, network requests) for debugging test execution.
 * [**`playwright-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-report_v2/): HTML test report generated from the v2 UI test script (`calc_v2_test.spec.ts`) for all environments.
-* [**`playwright-API-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v2/): HTML test report generated from the v2 API Post request- test script (`calc_v2_api.spec.ts`).
-* [**`playwright-API-report_v3/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v3/): HTML test report generated from the v3  API Gest request - test script (`calc_v3_api.spec.ts`).
+* [**`playwright-API-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v2/): HTML test report generated from the v2 API POST request- test script (`calc_v2_api.spec.ts`).
+* [**`playwright-API-report_v3/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v3/): HTML test report generated from the v3  API GET request - test script (`calc_v3_api.spec.ts`).
 
 ---
 [back](#home)
@@ -92,13 +92,13 @@ npx playwright codegen <urllink> -o calc_test.spec.ts
 While Playwright Codegen works great for UI testing, API scripts are typically written manually since you're making HTTP requests directly to the backend. Here are the approaches for creating API tests:
 
 ### Basic API Test
-You'll need to identify the API endpoint,request type and parameters, then write the test manually:
-####API Details for Calculator Project:
+You'll need to identify the API endpoint, request type and parameters, then write the test manually:
+#### API Details for Calculator Project:
 **API endpoint**: [Calculator micro app API](https://testpages.eviltester.com/apps/api/calculator/calculate)
 
 **Request Types:**
 V2 (calc_v2_api.spec.ts): POST
-V3 (calc_v3-api.spec.ts): GET
+V3 (calc_v3_api.spec.ts): GET
 
 **Parameters:**
 Operation: The mathematical operation (plus, minus, times, divide)
@@ -108,7 +108,7 @@ right: The second operand/number
 
 For API testing, you can use Playwright's built-in `request` fixture to make HTTP calls directly:
 
-####Post Request 
+#### POST Request 
 ```typescript
 const response = await request.post('https://testpages.eviltester.com/apps/calculator-api/calculate', {
     headers: {
@@ -121,7 +121,7 @@ const response = await request.post('https://testpages.eviltester.com/apps/calcu
     }
   });
 ```
-####Get Request 
+#### GET Request 
 ```typescript
 const response = await request.get('https://testpages.eviltester.com/apps/api/calculator/calculate', {
     headers: {
@@ -132,7 +132,7 @@ const response = await request.get('https://testpages.eviltester.com/apps/api/ca
       left: 5,
       right: 3
     }
-}
+})
 ```
 
 ### Key Differences: POST vs GET Requests
@@ -210,7 +210,7 @@ npx playwright test calc_test.spec.ts
 ### Basic Execution (API Tests)
 To run an API test:
 ```bash
-npx playwright test calc-api.spec.ts
+npx playwright test calc_api.spec.ts
 ```
 
 ### Visual Execution (Headed Mode)
@@ -222,7 +222,7 @@ npx playwright test calc_test.spec.ts --headed
 ### Parallel Execution 
 To run on different workers in parallel mode:
 ```bash 
-npx playwright test calc-api.spec.ts  --fully-parallel
+npx playwright test calc_api.spec.ts  --fully-parallel
 ```
 
 ### Config Execution
@@ -252,7 +252,7 @@ cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v2 npx playwright tes
 
 **For API Tests V3:**
 ```powershell
-cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v3 npx playwright test calc_v3-api.spec.ts --reporter=html
+cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v3 npx playwright test calc_v3_api.spec.ts --reporter=html
 ```
 
 ### Using NPM Scripts (Recommended)
@@ -268,10 +268,10 @@ npm run test-api
 # Run API tests (V3 with data-driven scenarios)
 npm run test-api-v3
 
-#Record Simple UI testcase
+# Record Simple UI testcase
 npm run test-trace
 
-#Play the recorded session
+# Play the recorded session
 npm run play
 ```
 
