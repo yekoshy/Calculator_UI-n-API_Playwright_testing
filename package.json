@@ -6,7 +6,9 @@
   "scripts": {
     "test": "cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-report_v2 playwright test calc_v2_test.spec.ts --config=config/playwright.config.ts --reporter=html",
     "test-api":"cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v2 playwright test calc_v2_api.spec.ts --reporter=html --fully-parallel",
-    "test-api-v3":"cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v3 playwright test calc_v3-api.spec.ts --reporter=html --fully-parallel"
+    "test-api-v3":"cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v3 playwright test calc_v3-api.spec.ts --reporter=html --fully-parallel",
+    "test-trace":"playwright test calc_test.spec.ts --trace on",
+    "play":"playwright show-trace test-results/calc_test-test/trace.zip"
   },
   "repository": {
     "type": "git",

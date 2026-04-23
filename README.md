@@ -219,6 +219,12 @@ To actually see the browser opening and clicking through the steps:
 npx playwright test calc_test.spec.ts --headed
 ```
 
+### Parallel Execution 
+To run on different workers in parallel mode:
+```bash 
+npx playwright test calc-api.spec.ts  --fully-parallel
+```
+
 ### Config Execution
 Run the test using the shared Playwright config file so it applies the defined browsers, devices, retries, and workers:
 ```bash
@@ -253,14 +259,20 @@ cross-env PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-API-report_v3 npx playwright tes
 The project includes predefined scripts in `package.json` for convenience:
 
 ```bash
-# Run UI tests (V2 with data-driven scenarios)
+# Run UI tests (V2 with data-driven scenarios, parallel execution and retries)
 npm run test
 
 # Run API tests (V2 with data-driven scenarios)
 npm run test-api
 
-# Run API tests (V3 with parallel execution and retries)
+# Run API tests (V3 with data-driven scenarios)
 npm run test-api-v3
+
+#Record Simple UI testcase
+npm run test-trace
+
+#Play the recorded session
+npm run play
 ```
 
 ### Viewing the Report
