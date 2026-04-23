@@ -40,9 +40,9 @@ Here is an overview of the files included in this repository and what they do:
 
 ### Reports & Results
 * **`test-results/`**: Contains trace files (videos, DOM snapshots, network requests) for debugging test execution.
-* [**`playwright-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-report_v2/): HTML test report generated from the v2 UI test script (`calc_v2_test.spec.ts`) for all environments.
-* [**`playwright-API-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v2/): HTML test report generated from the v2 API POST request- test script (`calc_v2_api.spec.ts`).
-* [**`playwright-API-report_v3/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Plawright_testing/playwright-API-report_v3/): HTML test report generated from the v3  API GET request - test script (`calc_v3_api.spec.ts`).
+* [**`playwright-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Playwright_testing/playwright-report_v2/): HTML test report generated from the v2 UI test script (`calc_v2_test.spec.ts`) for all environments.
+* [**`playwright-API-report_v2/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Playwright_testing/playwright-API-report_v2/): HTML test report generated from the v2 API POST request- test script (`calc_v2_api.spec.ts`).
+* [**`playwright-API-report_v3/index.html`**](https://yekoshy.github.io/Calculator_UI-n-API_Playwright_testing/playwright-API-report_v3/): HTML test report generated from the v3  API GET request - test script (`calc_v3_api.spec.ts`).
 
 ---
 [back](#home)
