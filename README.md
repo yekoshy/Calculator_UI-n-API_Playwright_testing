@@ -1,6 +1,6 @@
-# 🎭 Playwright Testing: Server-Side Calculator API
+# 🎭 Playwright Testing: Server-Side Calculator using API
 
-Welcome to the Playwright testing suite for the [**Server-Side Calculator API**](https://testpages.eviltester.com/apps/calculator-api/form-calculator/) micro app! This repository demonstrates how to set up Playwright, record/write test scripts for both UI and API testing, run them with HTML reporting, debug using trace viewers, and scale your tests from simple recorded scripts to data-driven, parallel execution across multiple browsers.
+Welcome to the Playwright testing suite for the [**Server-Side Calculator using API**](https://testpages.eviltester.com/apps/calculator-api/form-calculator/) micro app! This repository demonstrates how to set up Playwright, record/write test scripts for both UI and API testing, run them with HTML reporting, debug using trace viewers, and scale your tests from simple recorded scripts to data-driven, parallel execution across multiple browsers.
 
 <a id="home"></a>
 ## 🔗 Jump to important sections
