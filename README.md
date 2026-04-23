@@ -111,6 +111,9 @@ For API testing, you can use Playwright's built-in `request` fixture to make HTT
 ####Post Request 
 ```typescript
 const response = await request.post('https://testpages.eviltester.com/apps/calculator-api/calculate', {
+    headers: {
+      'accept': 'application/json'
+    },
     data: {
         operation: 'plus',
         left: 5,

@@ -4,6 +4,9 @@ import { test, expect } from '@playwright/test';
 for (const data of testData) {
   test(`API POST: ${data.id} - ${data.description}`, async ({ request }) => {
     const response = await request.post('https://testpages.eviltester.com/apps/api/calculator/calculate', {
+      headers: {
+        'accept': 'application/json'
+      },
       data: {
         operation: data.operator,
         left: data.operand1,
