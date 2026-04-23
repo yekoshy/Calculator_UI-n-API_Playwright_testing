@@ -6,7 +6,8 @@
     "operator": "plus",
     "operand2": "7",
     "expectedResult": "12",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-02",
@@ -15,7 +16,8 @@
     "operator": "plus",
     "operand2": "-10",
     "expectedResult": "-15",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-03",
@@ -24,7 +26,8 @@
     "operator": "minus",
     "operand2": "5",
     "expectedResult": "10",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-04",
@@ -33,7 +36,8 @@
     "operator": "minus",
     "operand2": "10",
     "expectedResult": "-6",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-05",
@@ -42,7 +46,8 @@
     "operator": "times",
     "operand2": "4",
     "expectedResult": "32",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-06",
@@ -51,7 +56,8 @@
     "operator": "times",
     "operand2": "4",
     "expectedResult": "-20",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-07",
@@ -60,7 +66,8 @@
     "operator": "times",
     "operand2": "0",
     "expectedResult": "0",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-08",
@@ -69,7 +76,8 @@
     "operator": "divide",
     "operand2": "4",
     "expectedResult": "5",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-09",
@@ -78,7 +86,8 @@
     "operator": "divide",
     "operand2": "4",
     "expectedResult": "2.5",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "PF-10",
@@ -87,7 +96,8 @@
     "operator": "plus",
     "operand2": "1.2",
     "expectedResult": "3.7",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "NF-01",
@@ -96,7 +106,8 @@
     "operator": "divide",
     "operand2": "0",
     "expectedResult": "∞", 
-    "resultType": "error_handling"
+    "resultType": "error_handling",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "NF-02",
@@ -104,8 +115,9 @@
     "operand1": "",
     "operator": "plus",
     "operand2": "5",
-    "expectedResult": "Error: Empty input",
-    "resultType": "validation"
+    "expectedResult": "Empty input",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "NF-03",
@@ -113,8 +125,9 @@
     "operand1": "5",
     "operator": "plus",
     "operand2": "",
-    "expectedResult": "Error: Empty input",
-    "resultType": "validation"
+    "expectedResult": "Empty input",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "NF-04",
@@ -122,8 +135,9 @@
     "operand1": "",
     "operator": "plus",
     "operand2": "",
-    "expectedResult": "Error: Empty input",
-    "resultType": "validation"
+    "expectedResult": "Empty input",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "NF-05",
@@ -131,8 +145,9 @@
     "operand1": "abc",
     "operator": "plus",
     "operand2": "5",
-    "expectedResult": "Error: Unknown token: abc",
-    "resultType": "validation"
+    "expectedResult": "Unknown token: abc",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "NF-06",
@@ -140,8 +155,9 @@
     "operand1": "!@#",
     "operator": "plus",
     "operand2": "$%%",
-    "expectedResult": "Error: Unknown token: !@#$%%",
-    "resultType": "validation"
+    "expectedResult": "Unknown token: !@#$%%",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "NF-07",
@@ -149,8 +165,9 @@
     "operand1": "   ",
     "operator": "plus",
     "operand2": "5",
-    "expectedResult": "Error: Empty input",
-    "resultType": "validation"
+    "expectedResult": "Empty input",
+    "resultType": "validation",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "BV-01",
@@ -159,7 +176,8 @@
     "operator": "plus",
     "operand2": "1",
     "expectedResult": "1000000000000000",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "BV-02",
@@ -168,16 +186,18 @@
     "operator": "plus",
     "operand2": "0.00000000002",
     "expectedResult": "0.00000000003",
-    "resultType": "success"
+    "resultType": "success",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "BV-03",
     "description": "Max length input validation",
-    "operand1": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "operand1": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
     "operator": "times",
-    "operand2": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "operand2": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
     "expectedResult": "∞",
-    "resultType": "extreme_boundary"
+    "resultType": "extreme_boundary",
+	  "api":{"expectedStatus": 200, "expectedResponseType": "VALUE"	 }
   },
   {
     "id": "SEC-01",
@@ -186,7 +206,8 @@
     "operator": "plus",
     "operand2": "5",
     "expectedResult": "Unknown token: scriptalertscript",
-    "resultType": "security"
+    "resultType": "security",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   },
   {
     "id": "SEC-02",
@@ -194,7 +215,8 @@
     "operand1": "' OR 1=1 --",
     "operator": "plus",
     "operand2": "5",
-    "expectedResult": "Error: Unknown token: or",
-    "resultType": "security"
+    "expectedResult": "Unknown token: or",
+    "resultType": "security",
+	  "api":{"expectedStatus": 400, "expectedResponseType": "INPUT_ERROR"	 }
   }
 ]
