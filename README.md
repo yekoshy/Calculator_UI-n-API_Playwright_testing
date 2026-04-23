@@ -12,6 +12,7 @@ Welcome to the Playwright testing suite for the [**Server-Side Calculator API**]
 * [Step 3: Running Tests & Generating Reports](#step-3)
 * [Step 4: Debugging with Traces (Video & Playback)](#step-4)
 * [Step 5: Git Commands & Workflow](#step-5)
+* [Bug report](Bugz.md)
 
 <a id="project-structure"></a>
 ## 📂 Project Structure & Files Explanation
